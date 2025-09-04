@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NanoBanana AI - Estúdio de Imagens com IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #6e44ff;
+        --secondary: #ff44cc;
+        --accent: #00ffcc;
+        --dark: #0f172a;
+        --darker: #0a0e1a;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --success: #10b981;
+        --error: #ef4444;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': 'var(--primary)',
+              'brand-secondary': 'var(--secondary)',
+              'brand-accent': 'var(--accent)',
+              'brand-dark': 'var(--dark)',
+              'brand-darker': 'var(--darker)',
+              'brand-light': 'var(--light)',
+              'brand-gray': 'var(--gray)',
+              'brand-error': 'var(--error)',
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              orbitron: ['Orbitron', 'sans-serif'],
+            },
+            boxShadow: {
+              'glow-primary': '0 5px 20px rgba(110, 68, 255, 0.5)',
+              'glow-primary-hover': '0 8px 25px rgba(110, 68, 255, 0.7)',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-darker text-brand-light font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
